@@ -23,7 +23,6 @@ code {
   position: relative;
   width: 100%;
   height: 100vh;
-  /* overflow: hidden; */
 }
 
 video {
@@ -33,15 +32,54 @@ video {
   width: 100%;
   height: 90%;
   object-fit: cover;
-  /* Ensures the video covers the entire container */
+}
+
+.bigcard {
+  position: absolute;
+  left: 39%;
+  top: 27%;
 }
 
 .content {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  width: 290px;
+  height: 260px;
   color: white;
+}
+
+.click {
+  width: 290px;
+  height: 260px;
+  color: white;
+}
+
+.flipcard {
+  position: absolute;
+  width: 290px;
+  height: 260px;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.content:hover .flipcard {
+  transform: rotateY(180deg);
+}
+
+.content1, .content2 {
+  width: 290px;
+  height: 260px;
+  position: absolute;
+  backface-visibility: hidden;
+  color: white;
+}
+
+.content2 {
+  width: 290px;
+  height: 260px;
+  overflow: hidden;
+  position: absolute;
+  color: white;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
 }
 
 .links {
