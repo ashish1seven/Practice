@@ -175,8 +175,8 @@ video {
   width: 100%;
   background: #282828;
   min-height: 100px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -251,28 +251,28 @@ video {
   z-index: 1000;
   opacity: 1;
   bottom: 0;
-  animation: animateWaves 6s linear infinite;
+  animation: animateWaves 5s linear infinite;
 }
 
 .wave#wave2 {
   z-index: 999;
   opacity: 0.5;
   bottom: 10px;
-  animation: animate 6s linear infinite !important;
+  animation: animate 5s linear infinite !important;
 }
 
 .wave#wave3 {
   z-index: 1000;
   opacity: 0.2;
   bottom: 15px;
-  animation: animateWaves 5s linear infinite;
+  animation: animateWaves 4s linear infinite;
 }
 
 .wave#wave4 {
   z-index: 999;
   opacity: 0.7;
   bottom: 20px;
-  animation: animate 5s linear infinite;
+  animation: animate 4s linear infinite;
 }
 
 @keyframes animateWaves {

@@ -29,7 +29,7 @@ const Footer = () => {
             </li>
             <li class="social-icon__item">
               <a class="social-icon__link" href="">
-                <img
+                <img className='rounded-full'
                   src="https://cdn1.iconfinder.com/data/icons/capsocial/500/linkedin2-256.png"
                   alt=""
                 />
