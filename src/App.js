@@ -1,4 +1,5 @@
 import About from "./components/about";
+import Footer from "./components/footer";
 import Skills from "./components/skills";
 import VideoBg from "./components/video-bg";
 
@@ -7,7 +8,8 @@ function App() {
     <>
       <VideoBg />
       <About />
-      <Skills/>
+      <Skills />
+      <Footer />
     </>
   );
 }

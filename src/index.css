@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css');
-@import url('https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css');
 
 body {
+  width: 98.8vw;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -19,6 +19,7 @@ code {
     monospace;
 }
 
+/*video background..................................................................*/
 .video-background {
   position: relative;
   width: 100%;
@@ -34,6 +35,20 @@ video {
   object-fit: cover;
 }
 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Adjust the alpha value to control the dimming effect */
+  pointer-events: none;
+  /* Allows user interaction with the video beneath the overlay */
+}
+
+/*video background...................................finish...............................*/
+/*profile.................................................................................*/
 .bigcard {
   position: absolute;
   left: 50%;
@@ -69,22 +84,18 @@ video {
   transform: rotateY(180deg);
 }
 
-.content1 {
+.content1, .content2 {
   width: 290px;
   height: 260px;
+  overflow: hidden;
   position: absolute;
   backface-visibility: hidden;
   color: white;
 }
 
 .content2 {
-  width: 290px;
-  height: 260px;
   overflow: hidden;
-  position: absolute;
-  color: white;
   background: transparent;
-  backface-visibility: hidden;
   transform: rotateY(180deg);
 }
 
@@ -130,18 +141,8 @@ video {
   }
 }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 90%;
-  background-color: rgba(0, 0, 0, 0.5);
-  /* Adjust the alpha value to control the dimming effect */
-  pointer-events: none;
-  /* Allows user interaction with the video beneath the overlay */
-}
-
+/*profile................................................finish.................................*/
+/*skills........................................................................................*/
 .bar {
   width: 100%;
   height: 6px;
@@ -166,3 +167,131 @@ video {
     width: 80%;
   }
 }
+
+/*skills.........................................finish.........................................*/
+/*footer........................................................................................*/
+.footer {
+  position: relative;
+  width: 100%;
+  background: #282828;
+  min-height: 100px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 200px;
+}
+
+.social-icon, .menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.social-icon__item, .menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+
+.social-icon__link img {
+  height: 30px;
+  width: 30px;
+}
+
+.social-icon__link img:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  opacity: 1;
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("https://static.vecteezy.com/system/resources/thumbnails/009/302/625/small/sea-waves-clipart-design-illustration-free-png.png");
+  background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 6s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 6s linear infinite !important;
+}
+
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 5s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 5s linear infinite;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: -1000px;
+  }
+
+  100% {
+    background-position-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: 1000px;
+  }
+
+  100% {
+    background-position-x: 0px;
+  }
+}
+/*footer................................................finish..................................*/

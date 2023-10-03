@@ -17,8 +17,8 @@ const Profile = () => {
               <h1 className="mt-4 text-6xl ">B Ashish </h1>
               <h1>Web Developer</h1>
             </div>
-            <div className=" content2">
-              <img className="m-auto h-96" src={Image} alt="" />
+            <div className="content2">
+              <img className="h-64 m-auto rounded" src={Image} alt="" />
             </div>
           </div>
         </div>
