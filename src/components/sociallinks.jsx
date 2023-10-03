@@ -19,10 +19,7 @@ const Sociallinks = () => {
         />
       </a>
 
-      <a
-        href="https://www.linkedin.com/in/ashish-bobbari-6b73b1221/"
-        target="blank"
-      >
+      <a href="https://www.linkedin.com/in/ashish-bobbari-6b73b1221/" target="blank">
         <img
           className="w-10 h-10 mx-1 transition-all duration-1000 ease-in-out delay-75 rounded-full hover:bg-white hover:scale-110 hover:rotate-[360deg]"
           src="https://cdn1.iconfinder.com/data/icons/capsocial/500/linkedin2-256.png"
