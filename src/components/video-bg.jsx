@@ -12,8 +12,8 @@ const VideoBg = () => {
             </video>
             <div className="overlay"></div>
             <Navbar/>
-            <Profile />
-            <Sociallinks />
+            <Profile/>
+            <Sociallinks/>
         </div>
     );
 }
